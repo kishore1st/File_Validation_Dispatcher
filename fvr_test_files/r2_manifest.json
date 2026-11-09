@@ -1,0 +1,88 @@
+{
+  "cases": [
+    {
+      "case": 1,
+      "file": "case01_orders_q3.csv",
+      "file_type_code": "order",
+      "declared_size": 226,
+      "expect": "PASSED -> ROUTED_INTAKE"
+    },
+    {
+      "case": 2,
+      "file": "case02_customers_full.csv",
+      "file_type_code": "customer",
+      "declared_size": 194,
+      "expect": "PASSED -> ROUTED_INTAKE"
+    },
+    {
+      "case": 3,
+      "file": "case03_payments_may.csv",
+      "file_type_code": "payments",
+      "declared_size": 180,
+      "expect": "PASSED -> ROUTED_INTAKE"
+    },
+    {
+      "case": 4,
+      "file": "case04_customers_missing_email.csv",
+      "file_type_code": "customer",
+      "declared_size": 234,
+      "expect": "FAILED (SCHEMA_MATCH) -> ROUTED_QUARANTINE"
+    },
+    {
+      "case": 5,
+      "file": "case05_customers_reordered.csv",
+      "file_type_code": "customer",
+      "declared_size": 194,
+      "expect": "FAILED (COLUMN_ORDER_MATCH) -> ROUTED_QUARANTINE"
+    },
+    {
+      "case": 6,
+      "file": "case06_orders_zero_rows.csv",
+      "file_type_code": "order",
+      "declared_size": 63,
+      "expect": "WARNED (FILE_NOT_EMPTY_ROWS) -> ROUTED_INTAKE"
+    },
+    {
+      "case": 7,
+      "file": "case07_employee_roster.xlsx",
+      "file_type_code": "employee",
+      "declared_size": 101,
+      "expect": "REJECTED at manifest 400 (extension)"
+    },
+    {
+      "case": 8,
+      "file": "case08_orders_oversize_stub.csv",
+      "file_type_code": "order",
+      "declared_size": 525336576,
+      "expect": "REJECTED at manifest 413 (declared 501MB > 500MB max)"
+    },
+    {
+      "case": 9,
+      "file": "case09_orders_empty.csv",
+      "file_type_code": "order",
+      "declared_size": 0,
+      "expect": "REJECTED at manifest 400 (empty)"
+    },
+    {
+      "case": 10,
+      "file": "case01_orders_q3.csv (same bytes re-uploaded in a NEW session)",
+      "file_type_code": "order",
+      "declared_size": 226,
+      "expect": "duplicates:[file_id] -> COMPLETED_PARTIAL; no second copy"
+    },
+    {
+      "case": 11,
+      "file": "case11_random_export.csv",
+      "file_type_code": null,
+      "declared_size": 113,
+      "expect": "UNIDENTIFIED -> ROUTED_QUARANTINE"
+    },
+    {
+      "case": 12,
+      "file": "case01_orders_q3.csv while killing one worker pod mid-validation (kill -9)",
+      "file_type_code": "order",
+      "declared_size": 226,
+      "expect": "claim expires -> re-drive -> normal outcome; no dup evidence"
+    }
+  ]
+}

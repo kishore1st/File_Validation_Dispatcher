@@ -1,0 +1,2 @@
+loyalty_tier,country,city,address,phone,email,last_name,first_name,customer_id,signup_date
+gold,US,Springfield,"14 Rosewood Ln",+1-555-0142,alice.nandi@example.com,Nandi,Alice,C-2021,2025-06-01

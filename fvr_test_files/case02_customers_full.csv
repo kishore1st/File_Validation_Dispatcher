@@ -1,0 +1,2 @@
+customer_id,first_name,last_name,email,phone,address,city,country,signup_date,loyalty_tier
+C-2001,Alice,Nandi,alice.nandi@example.com,+1-555-0142,"14 Rosewood Ln",Springfield,US,2025-01-15,gold

@@ -1,0 +1,4 @@
+order_id,customer_id,order_date,amount,currency,status,channel
+ORD-1001,C-2001,2026-09-03,149.50,USD,shipped,portal
+ORD-1002,C-2002,2026-09-11,89.99,USD,delivered,portal
+ORD-1003,C-2001,2026-09-24,320.00,USD,processing,retail

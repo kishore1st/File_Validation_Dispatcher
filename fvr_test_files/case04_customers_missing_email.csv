@@ -1,0 +1,3 @@
+customer_id,first_name,last_name,phone,address,city,country,signup_date,loyalty_tier
+C-2011,Ben,Oduya,+1-555-0177,"88 Hill Rd",Springfield,US,2025-03-02,silver
+C-2012,Cara,Lin,+1-555-0188,"2 Park Ave",Shelbyville,US,2025-04-19,bronze

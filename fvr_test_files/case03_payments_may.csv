@@ -1,0 +1,3 @@
+payment_id,order_id,payment_method,amount,card_last4,payment_date,status
+PAY-5001,ORD-1001,card,149.50,4242,2026-09-03,captured
+PAY-5002,ORD-1002,paypal,89.99,,2026-09-12,captured
